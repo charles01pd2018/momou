@@ -15,6 +15,10 @@ a {
   text-decoration: none;
 }
 
+object {
+  pointer-events: none;
+}
+
 * {
   box-sizing: border-box;
 }

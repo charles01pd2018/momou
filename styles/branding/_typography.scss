@@ -5,11 +5,11 @@ $font-scale--tablet:                0.95;
 $font-scale--mobile:                0.9;
 
 $font-sizing-map: (
-    "h1":               2.8em,
-    "h2":               2.35em,
-    "h3":               1.7em,
-    "h4":               1.1em,
-    "p":                1.1em,
+    "h1":               3em,
+    "h2":               2.4em,
+    "h3":               1.8em,
+    "h4":               1.4em,
+    "p":                1.2em,
     "p.text-sm":        1em,
     "p.text-xs":        0.8em
 );
@@ -39,4 +39,11 @@ $font-sizing-map: (
             font-size: $font-size * $font-scale--mobile;
         }
     }
+}
+
+/*--------------------------------------------------------------
+# Helper
+--------------------------------------------------------------*/
+.weak-heading {
+    font-weight: normal;
 }

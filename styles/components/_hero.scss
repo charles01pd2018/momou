@@ -2,9 +2,13 @@
 
     .hero-wrapper {
 
-    }
-
-    @media ( max-width: $breakpoint--large ) {
+        .hero-text-wrapper {
+            text-align: center;
+        }
         
+        .hero-visual-wrapper {
+            display: block;
+            margin: auto;
+        }
     }
 }

@@ -1,36 +1,48 @@
 // dependencies
 import Head from 'next/head';
 // layout
-import DefaultLayout from '../layout/defaultLayout';
+import { DefaultLayout } from '../layout';
 // components
 import { Hero } from '../components';
 
+
 const Home = ({
+  content: {
+    pageTitle,
+    HeroContent,
+  }
 }) => {
   return (
     <DefaultLayout>
       <div className="container">
         <Head>
-            <title>Momou: Message Board</title>
+            <title>{pageTitle}</title>
         </Head>
 
-        <h1>
-            Momou
-        </h1>
-        <p>Easily create message boards</p>
+        <Hero id='site-hero' content={HeroContent} />
 
-        <img className='logo-placeholder' src="/favicon.svg" alt='site-logo' />
       </div>
     </DefaultLayout>
   );
 }
 
+
+const HomeContent = {
+  pageTitle: 'Momou: Message Board',
+  HeroContent: {
+    title: 'Momou',
+    description: 'Easily create message boards',
+    image: {
+      path: '/favicon.svg',
+      alt: 'site-logo',
+    }
+  }
+}
+
 export function getStaticProps() {
   return {
     props: {
-      content: {
-
-      }
+      content: HomeContent,
     }
   }
 }
