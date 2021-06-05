@@ -1,5 +1,5 @@
-import DefaultLayout from './defaultLayout';
+import PageLayout from './page-layout';
 
 export {
-    DefaultLayout,
+    PageLayout,
 };

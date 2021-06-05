@@ -1,0 +1,37 @@
+.header-container {
+    
+    .header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 2rem 3rem;
+
+        border: 1px solid black;
+
+        .header-logo-wrapper {
+            .header-logo {
+                width: 5rem;
+                height: 5rem;
+            }
+
+            border: 2px solid blue;
+        }
+
+        .header-nav-wrapper {
+            display: inline-flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-grow: 1;
+
+            .header-nav-item {
+                margin-right: 1rem;
+
+                // ADD CODE HERE TO HANDLE LAST OF TYPE WITH LINK BUTTON
+                // &:last-of-type {
+                //     padding-right: 0;
+                // }
+            }
+
+            border: 2px solid yellow;
+        }
+    }
+}

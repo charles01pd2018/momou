@@ -1,41 +1,81 @@
 // dependencies
 import Head from 'next/head';
 // layout
-import { DefaultLayout } from '../layout';
+import { PageLayout } from '../layout';
 // components
-import { Hero } from '../components';
+import { Hero, Split, List } from '../components';
 
 
 const Home = ({
   content: {
     pageTitle,
-    HeroContent,
+    layoutContent,
+    heroContent,
+    splitContent,
+    listContent,
   }
 }) => {
   return (
-    <DefaultLayout>
-      <div className="container">
-        <Head>
-            <title>{pageTitle}</title>
-        </Head>
-
-        <Hero id='site-hero' content={HeroContent} />
-
-      </div>
-    </DefaultLayout>
+    <>
+      <Head>
+          <title>{pageTitle}</title>
+      </Head>
+      <PageLayout content={layoutContent}>
+          <Hero id='home-hero-branding' content={heroContent} />
+          <Split id='home-split-features' content={splitContent} />
+          <List id='home-list-features' content={listContent} />
+      </PageLayout>
+    </>
   );
 }
 
 
 const HomeContent = {
   pageTitle: 'Momou: Message Board',
-  HeroContent: {
+  layoutContent: {
+    headerContent: {
+      linkButtonsList: [
+        {
+          text: 'App',
+          href: '/app',
+        }
+      ]
+    },
+  },
+  heroContent: {
     title: 'Momou',
     description: 'Easily create message boards',
     image: {
       path: '/favicon.svg',
       alt: 'site-logo',
     }
+  },
+  splitContent: {
+    splitList: [
+      {
+        text: 'Increase visibility into community discussion. Share ideas and collaborate all in one location.',
+        image: {
+          path: 'static/illustrations/message-board.svg',
+          alt: 'Message Board Illustration',
+        }
+      },
+    ]
+
+  },
+  listContent: {
+    mainList: {
+      title: 'Main Features',
+      listItems: [
+        'Create a message board',
+        'Share board via email or user account.',
+      ]
+    },
+    subList: {
+      title: 'Additional Features',
+      listItems: [
+        'Toggle between private/public boards.',
+      ]
+    },
   }
 }
 

@@ -1,0 +1,16 @@
+.split-container {
+    background-color: $ghost-white;
+    
+    .split-wrapper {
+        display: flex;
+        align-items: center;
+        
+        .split-text-wrapper {
+            flex-basis: 50%;;
+        }
+
+        .split-visual-wrapper {
+            flex-basis: 50%;
+        }
+    }
+}
