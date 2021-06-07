@@ -1,3 +1,5 @@
+// dependencies
+import classNames from 'classnames';
 // elements
 import { Logo, LinkButton } from '../../elements';
 
@@ -20,8 +22,14 @@ const Header = ( {
                 <nav className='header-nav-wrapper'>
                     {
                         linkButtonsList.map( ( linkButtonContent ) => {
+                            /* CONTENT */
+                            const { text } = linkButtonContent;
+                            /* CLASSNAMES */
+                            const linkButtonClasses = classNames( 'header-nav-item header-nav-button', 
+                                `header-nav-button--${text}`)
+
                             return (
-                                <LinkButton className='header-nav-item header-nav-button' content={linkButtonContent} />
+                                <LinkButton key={text} className={linkButtonClasses} content={linkButtonContent} />
                             );
                         } )
                     }
