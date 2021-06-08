@@ -36,7 +36,9 @@ const HomeContent = {
     headerContent: {
       linkButtonsList: [
         {
-          text: 'App',
+          content: {
+            text: 'App',
+          },
           href: '/app',
         }
       ]
