@@ -86,7 +86,7 @@ export function getStaticProps() {
     props: {
       content: HomeContent,
     }
-  }
+  };
 }
 
 export default Home;

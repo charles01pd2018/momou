@@ -1,0 +1,23 @@
+.sidebar-container {
+    height: 200vh;
+    .sidebar-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 10%;
+        height: 100vh;
+        position: sticky; // i forgot how to do this
+        justify-content: space-evenly;
+        text-align: center;
+
+        border: 2px solid blue;
+
+        .sidebar-nav {
+            .nav-item {
+                .nav-item-icon {
+                    width: 5rem;
+                    height: 5rem;
+                }
+            }
+        }
+    }
+}
