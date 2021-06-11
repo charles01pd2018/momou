@@ -21,15 +21,18 @@ const Header = ( {
 
                 <nav className='header-nav-wrapper'>
                     {
-                        linkButtonsList.map( ( linkButtonContent ) => {
+                        linkButtonsList.map( ( linkButton ) => {
                             /* CONTENT */
-                            const { text } = linkButtonContent;
+                            const { content } = linkButton;
                             /* CLASSNAMES */
                             const linkButtonClasses = classNames( 'header-nav-item header-nav-button', 
-                                `header-nav-button--${text}`)
+                                `header-nav-button--${content.text}`)
 
                             return (
-                                <LinkButton key={text} className={linkButtonClasses} content={linkButtonContent} />
+                                <LinkButton key={content.text} 
+                                className={linkButtonClasses} 
+                                content={content}
+                                href={linkButton.href} />
                             );
                         } )
                     }

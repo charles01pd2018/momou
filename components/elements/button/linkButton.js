@@ -6,8 +6,8 @@ const LinkButton = ( {
     className,
     content: {
         text,
-        href,
     },
+    href,
 } ) => {
 
     /* CLASSNAMES */
